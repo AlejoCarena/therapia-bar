@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelectorAll('.toggle');
     const dayOptions = document.querySelectorAll('.day-options');
     const promo = document.getElementById('promo');
-    const slider = document.querySelector('.slider');
     
     toggle.forEach((toggle) => {
         toggle.addEventListener('click', () => {
-            promo.innerHTML = ``;
-            slider.style.display = 'flex'; 
+            promo.innerHTML = ``; 
             dayOptions.forEach((option, index) => {
                 setTimeout(() => {
                     option.classList.toggle('show');
@@ -19,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function promodeldia(){
+    slider.style.display = 'flex';
+}
 function jueves(){
     const promo = document.getElementById('promo');
     slider.style.display = 'none';
