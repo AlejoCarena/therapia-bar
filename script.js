@@ -1,3 +1,5 @@
+const slider = document.querySelector('.slider');
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelectorAll('.toggle');
     const dayOptions = document.querySelectorAll('.day-options');
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function jueves(){
     const promo = document.getElementById('promo');
-    document.querySelector('.slider').style.display = 'none';
+    slider.style.display = 'none';
     promo.innerHTML =``;
     setTimeout(() => {
         promo.innerHTML = `<img class="img" src="imgs/Flyer domingo promo.png" alt="">`;
