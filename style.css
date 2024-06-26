@@ -8,6 +8,7 @@ body, html{
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 html{
     scrollbar-color: grey black;
@@ -51,7 +52,7 @@ footer{
     width: 130px;
 }
 .firstViewport{
-    overflow-y: hidden;
+    overflow-x: hidden;
     width: 100%;
     height: 100vh;
 }
@@ -106,7 +107,7 @@ footer{
     align-items: center; 
     justify-content:center;
     position: absolute;
-    top: 90%;
+    top: 80%;
     transform: translatey(-80%);
     z-index: -1;
     opacity: 0; /* Iniciar con opacidad 0 */
