@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+html{
+    scrollbar-color: grey black;
+}
+footer{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+}
+.contact, .carta{
+    justify-content: center;
+    display: flex;
+    align-items:center;   
+    background-color: rgba(37, 37, 37, 0.655);
+    width: 50%;
+    border-radius: 200px;
+    height: 40px;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.contact, .carta{
+    text-decoration: none;
+    color: white;
+    padding-right:5px;
+    padding-left: 5px;
+}
+.container-logo{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    padding-top: 10px;
+    
+    width: 130px;
+}
+.firstViewport{
+    
+    width: 100%;
+    height: 100dvh;
+}
+#background-video{
+    position: fixed;
+    filter: brightness(0.3);
+    z-index: -5;
+    height: 100dvh;
+    object-fit: cover;
+    width:100vw;
+}
+.promotions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.promotions div{
+    transition: all 2s ease; /* Agrega una transición suave de 0.5 segundos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-radius: 200px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    background-color: black;
+    cursor: pointer;
+}
+.promotions div h1{
+    padding: 2px;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin: 1px;
+    color: white;
+}
+
+#promo{
+    transition: all 2s ease; /* Transición de suavidad */
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content:center;
+    position: absolute;
+    top: 80%;
+    transform: translatey(-80%);
+    z-index: -1;
+    opacity: 0; /* Iniciar con opacidad 0 */
+}
+#promo.show {
+    opacity: 1; /* Cambiar a opacidad 1 cuando se muestra */
+}
+.img{
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+}
+.day-options {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.day-options.show {
+    opacity: 1;
+    max-height: 100px; /* Ajusta el tamaño según sea necesario */
+}
+#secondViewport{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.814);
+}
+.seccontact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seccontact ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.seccontact ul svg{
+    width: 50px;
+}
+.container-map{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#map {
+    
+    width: 70%;
+    
+}
+.creditos{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.creditos p{
+
+    color: white;
+}
+.slider {
+    top: 30%;
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: 420px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 0px !important;
+    background-color: unset !important;
+    z-index: -5;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transición de suavidad */
+    opacity: 0;
+    border-radius: 0px !important;
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.prev {
+    transform: translateX(-100%);
+}
+
+.slide.next {
+    transform: translateX(100%);
+}
+
+@media (min-width: 440px)
+{
+    .slider{
+        max-width: 300px;
+    }
+}    
