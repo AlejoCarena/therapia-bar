@@ -108,8 +108,7 @@ footer{
     align-items: center; 
     justify-content:center;
     position: absolute;
-    top: 80%;
-    transform: translatey(-80%);
+    bottom: 0;
     z-index: -1;
     opacity: 0; /* Iniciar con opacidad 0 */
 }
@@ -213,9 +212,4 @@ footer{
 .slide.next {
     transform: translateX(100%);
 }
-@media (max-width:300px){
-    #promo{
-        top: 130%;
-        transform: translatey(-130%);
-    }
-}
+
