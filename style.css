@@ -8,8 +8,15 @@ body, html{
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+}
+.container{
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
     overflow-x: hidden;
 }
+
 html{
     scrollbar-color: grey black;
 }
@@ -52,6 +59,7 @@ footer{
     width: 130px;
 }
 .firstViewport{
+    scroll-snap-align: start; /* Alineación de inicio al hacer scroll */
     position: relative;
     overflow-x: hidden;
     width: 100%;
@@ -132,6 +140,7 @@ footer{
     max-height: 100px; /* Ajusta el tamaño según sea necesario */
 }
 #secondViewport{
+    scroll-snap-align: start; /* Alineación de inicio al hacer scroll */
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
